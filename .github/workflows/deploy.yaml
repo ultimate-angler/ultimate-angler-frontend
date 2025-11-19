@@ -1,0 +1,47 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: eu-north-1
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync dist/ s3://${{ secrets.FRONTEND_S3_BUCKET }} --delete
+        env:
+          AWS_REGION: eu-north-1
+
+      - name: Create CloudFront invalidation
+        # preferred: pass distribution id as secret FRONTEND_CF_DISTRIBUTION_ID (from terraform output)
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.FRONTEND_CF_DISTRIBUTION_ID }} --paths "/*"
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION }}
