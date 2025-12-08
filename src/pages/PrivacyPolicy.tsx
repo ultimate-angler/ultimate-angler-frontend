@@ -20,11 +20,11 @@ export default function PrivacyPolicy() {
             <p className="mt-2 text-sm text-gray-600">Last updated: 11.30.2025.</p>
 
             <p className="mt-6 text-gray-800">
-              Thank you for using our app (“the App”). We respect your privacy and want to be
+              Thank you for using our app (“Reel World Pro”). We respect your privacy and want to be
               transparent about how data is handled.
             </p>
             <p className="mt-4 text-gray-800">
-              We collect only the minimal information necessary for the App to function and we do
+              We collect only the minimal information necessary for the Reel World Pro App to function and we do
               not process, sell, or use data for advertising or analytics.
             </p>
 
@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
             <h3 className="mt-6 text-lg font-semibold text-[#0F4377]">1.2 User-Generated Content</h3>
             <p className="mt-2 text-gray-800">
               If you create posts, comments, or upload images inside the App, we may store this
-              content solely to display it within the App.
+              content solely to display it within the Reel World ProApp.
             </p>
             <p className="mt-2 text-gray-800">
               We do not analyze or process this content for advertising, profiling, or tracking.
@@ -95,12 +95,12 @@ export default function PrivacyPolicy() {
             <h2 className="mt-8 text-xl font-semibold text-[#0F4377]">4. Data Sharing</h2>
             <p className="mt-2 text-gray-800">
               We do not share, sell, or rent your data to any third parties. Your data is used only
-              inside the App and only for essential functionality.
+              inside the Reel World ProApp and only for essential functionality.
             </p>
 
             <h2 className="mt-8 text-xl font-semibold text-[#0F4377]">5. Third-Party Services</h2>
             <ul className="mt-2 list-disc pl-6 text-gray-800">
-              <li>The App does not use:</li>
+              <li>The Reel World Pro App does not use:</li>
               <li>Third-party analytics</li>
               <li>Advertisement SDKs</li>
               <li>External tracking tools</li>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
             <h2 className="mt-8 text-xl font-semibold text-[#0F4377]">6. Children’s Privacy</h2>
             <p className="mt-2 text-gray-800">
               We do not knowingly collect personal data from children under 13. If a child creates an
-              account, their information is used only for the immediate functionality of the App and
+              account, their information is used only for the immediate functionality of the Reel World Pro App and
               is not shared or processed.
             </p>
 
