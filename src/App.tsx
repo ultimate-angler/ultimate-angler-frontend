@@ -5,6 +5,7 @@ import DownloadButton from './components/DownloadButton'
 import MockiPhones from './components/MockiPhones'
 import FeatureBullets from './components/FeatureBullets'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndConditions'
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
     return <PrivacyPolicy />
   }
 
+  if (route === '/terms') {
+    return <TermsAndConditions />
+  }
+
   return (
     <div className="min-h-screen relative bg-gradient-to-b from-[#F3F4F8] to-[#FDFDFD]">
       <DownloadButton />
@@ -35,12 +40,18 @@ function App() {
         <div className="h-full w-full flex items-center justify-between px-6 sm:px-10 md:px-14">
           <div className="hidden sm:block">
             <FeatureBullets />
-            <div className="mt-6">
+            <div className="mt-6 flex gap-3">
               <a
                 href="/privacy"
                 className="inline-block px-4 py-2 text-white bg-gradient-to-r from-[#0F4377] to-[#2883B3] rounded-xl"
               >
                 Privacy Policy
+              </a>
+              <a
+                href="/terms"
+                className="inline-block px-4 py-2 text-white bg-gradient-to-r from-[#0F4377] to-[#2883B3] rounded-xl"
+              >
+                Terms & Conditions
               </a>
             </div>
           </div>
@@ -63,12 +74,18 @@ function App() {
       <div className="block sm:hidden px-6 pb-16">
         <div className="rounded-2xl bg-[#F3F4F8] shadow-md p-4">
           <FeatureBullets />
-          <div className="mt-4">
+          <div className="mt-4 space-y-3">
             <a
               href="/privacy"
               className="inline-block w-full text-center px-4 py-3 text-white bg-gradient-to-r from-[#0F4377] to-[#2883B3] rounded-xl"
             >
               Privacy Policy
+            </a>
+            <a
+              href="/terms"
+              className="inline-block w-full text-center px-4 py-3 text-white bg-gradient-to-r from-[#0F4377] to-[#2883B3] rounded-xl"
+            >
+              Terms & Conditions
             </a>
           </div>
         </div>
